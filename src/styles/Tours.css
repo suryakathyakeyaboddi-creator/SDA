@@ -1,0 +1,178 @@
+.tours-page {
+    padding-top: var(--spacing-xl);
+}
+
+.tours-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.tours-header h1 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.tours-content {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: var(--spacing-xl);
+    position: relative;
+}
+
+/* Sidebar Filters */
+.filters-sidebar {
+    background: var(--color-bg-white);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.filter-group {
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.filter-group:last-child {
+    border-bottom: none;
+}
+
+.filter-group h3 {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-primary);
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    transition: border-color var(--transition-fast);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.category-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.category-btn {
+    padding: 6px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    font-size: 0.9rem;
+    transition: all var(--transition-fast);
+    background: var(--color-bg-light);
+}
+
+.category-btn:hover {
+    background: var(--color-bg-white);
+    border-color: var(--color-primary);
+}
+
+.category-btn.active {
+    background-color: var(--color-primary);
+    color: var(--color-bg-white);
+    border-color: var(--color-primary);
+}
+
+.price-slider {
+    width: 100%;
+    cursor: pointer;
+    accent-color: var(--color-primary);
+}
+
+.price-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    margin-top: 5px;
+}
+
+/* Tours Grid */
+.tours-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.no-results {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background: var(--color-bg-light);
+    border-radius: var(--radius-md);
+}
+
+.no-results h3 {
+    color: var(--color-text-main);
+    margin-bottom: var(--spacing-sm);
+}
+
+.no-results button {
+    margin-top: var(--spacing-md);
+}
+
+/* Mobile Responsive */
+.filter-toggle {
+    display: none;
+    margin-bottom: var(--spacing-md);
+    width: 100%;
+}
+
+.close-filters {
+    display: none;
+    width: 100%;
+    margin-top: var(--spacing-md);
+    padding: 10px;
+    background: var(--color-border);
+}
+
+@media (max-width: 992px) {
+    .tours-content {
+        grid-template-columns: 1fr;
+    }
+
+    .filters-sidebar {
+        display: none;
+        /* Hidden by default on mobile/tablet */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100vh;
+        z-index: 2000;
+        overflow-y: auto;
+        border-radius: 0;
+    }
+
+    .filters-sidebar.active {
+        display: block;
+        box-shadow: 100px 0 0 rgba(0, 0, 0, 0.5);
+        /* Dim background effect */
+    }
+
+    .filter-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .close-filters {
+        display: block;
+    }
+}

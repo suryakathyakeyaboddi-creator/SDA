@@ -1,0 +1,41 @@
+:root {
+  /* Brand Colors */
+  --color-primary: #005f73;    /* Deep Ocean Blue */
+  --color-primary-dark: #0a4f60;
+  --color-secondary: #94d2bd;  /* Soft Teal */
+  --color-accent: #ee9b00;     /* Warm Gold/Orange */
+  --color-accent-hover: #ca8200;
+
+  /* Neutrals */
+  --color-text-main: #2b2d42;
+  --color-text-light: #5d606b;
+  --color-bg-light: #f8f9fa;
+  --color-bg-white: #ffffff;
+  --color-border: #e9ecef;
+
+  /* Typography */
+  --font-family-sans: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-family-heading: 'Outfit', sans-serif; /* We'll need to import this */
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}

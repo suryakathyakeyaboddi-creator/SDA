@@ -1,0 +1,108 @@
+.fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.vehicle-card {
+    background: var(--color-bg-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: transform var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.vehicle-image {
+    position: relative;
+    height: 250px;
+}
+
+.vehicle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vehicle-type {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--color-primary);
+    color: var(--color-bg-white);
+    padding: 5px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.vehicle-content {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.vehicle-content h3 {
+    color: var(--color-text-main);
+    margin-bottom: var(--spacing-xs);
+}
+
+.vehicle-desc {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.5;
+}
+
+.vehicle-specs {
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    gap: var(--spacing-md);
+    font-weight: 500;
+    color: var(--color-secondary);
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.vehicle-features {
+    margin-bottom: var(--spacing-lg);
+    flex-grow: 1;
+}
+
+.vehicle-features h4 {
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text-main);
+}
+
+.vehicle-features ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.vehicle-features ul li {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    background-color: var(--color-bg-light);
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.vehicle-features ul li svg {
+    color: var(--color-accent);
+}
